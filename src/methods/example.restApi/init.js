@@ -5,7 +5,7 @@ class ExampleRestApiInitalize extends baseInitialize {
     super();
     this.pkgInitializer =  {};
     this.pkgInitializer.isSecured = false; // values: true/false
-    this.pkgInitializer.requestMethod = ['GET','POST']; // requestMethod: ['GET', 'POST', 'PUT', 'DELETE']
+    this.pkgInitializer.requestMethod = ['GET']; // requestMethod: ['GET', 'POST', 'PUT', 'DELETE']
   }
 
   getParameter() {
@@ -14,8 +14,8 @@ class ExampleRestApiInitalize extends baseInitialize {
         "name": "user_id",
         "type": "string",
         "description": "Example Id for user",
-        "required": false,
-        "default": ""
+        "required": true,
+        "default": "123"
       },
     };
 

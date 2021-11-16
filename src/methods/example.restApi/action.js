@@ -5,7 +5,8 @@ class ExampleRestApiAction extends baseAction {
     /*
     REST API EXAMPLE
 
-    Steps:
+    Prerequisites:
+    In init.js set the following:
     1. To create GET request, set this.pkgInitializer.requestMethod = ["GET"]
     2. To create POST request, set this.pkgInitializer.requestMethod = ["POST"]
     3. To create PUT request, set this.pkgInitializer.requestMethod = ["PUT"]
