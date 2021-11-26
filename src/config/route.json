@@ -1,14 +1,10 @@
 [
   {
-    "path": "room/join",
-    "methodName": "room.join"
+    "path": "customRoute",
+    "methodName": "example/customRoutes"
   },
   {
-    "path": "room/join/:userId",
-    "methodName": "room.join"
-  },
-  {
-    "path": "room/join/:userId/:roomId",
-    "methodName": "room.join"
+    "path": "example/testRoute",
+    "methodName": "example/customRoutes"
   }
 ]

@@ -3,17 +3,15 @@ class ExampleMongoUpdateUserDetailsAction extends baseAction {
     /*
     MONGO-DB UPDATE USER EXAMPLE
 
-    Prerequisites:
-    1. MongoDB is installed and running on localhost:27017
-    2. You have to install the njs2-mongo-driver package (npm install @njs2/mongodb)
-    3. If you are using mongodb cloud services such as Atlas, You have to configure credentials in config/config.json
+    Description:
+    - This example shows how to update a user's name.
 
     Steps:
-    1. Read the file library/mongoLib/model/user.js to see how to create a user schema, model and indexing.
-    2. Read the file library/mongoLib/user.lib.js to create custom queries on user model.
-    3. Run the project from the command line: njs2 run express;
-    4. After importing collection in postman, go to: example/mongoUpdateUserDetails.
-    6. After getting response, check your mongodb database to see if the user is updated.
+    1. In postman, go to: example/mongoUpdateUserDetails.
+    2. Pass the following parameters:
+      - user_id: The user's id.
+      - updated_user_name: The new name.
+    3. After getting response, check your mongodb database to see if the user is updated.
     */
 
     let { user_id, updated_user_name } = this;

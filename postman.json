@@ -7,6 +7,48 @@
   },
   "item": [
     {
+      "name": "example/apiGateway",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "enc_state",
+            "value": "1",
+            "disabled": true,
+            "description": "Encryption status: 1- Enable, 2- Disable",
+            "type": "text"
+          },
+          {
+            "key": "lng_key",
+            "value": "en",
+            "disabled": true,
+            "description": "Langauage key",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/example/apiGateway",
+          "host": [
+            "http://localhost:3000"
+          ],
+          "path": [
+            "example",
+            "apiGateway"
+          ],
+          "query": [
+            {
+              "key": "data",
+              "value": "",
+              "disabled": true,
+              "description": "Encrypted data and url encode(URLSearchParams) the encrypted data to handle special characters",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
       "name": "example/arguments",
       "request": {
         "method": "GET",
@@ -208,6 +250,174 @@
       "response": []
     },
     {
+      "name": "example/autoLoad",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "enc_state",
+            "value": "1",
+            "disabled": true,
+            "description": "Encryption status: 1- Enable, 2- Disable",
+            "type": "text"
+          },
+          {
+            "key": "lng_key",
+            "value": "en",
+            "disabled": true,
+            "description": "Langauage key",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/example/autoLoad",
+          "host": [
+            "http://localhost:3000"
+          ],
+          "path": [
+            "example",
+            "autoLoad"
+          ],
+          "query": [
+            {
+              "key": "data",
+              "value": "",
+              "disabled": true,
+              "description": "Encrypted data and url encode(URLSearchParams) the encrypted data to handle special characters",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "example/cron",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "enc_state",
+            "value": "1",
+            "disabled": true,
+            "description": "Encryption status: 1- Enable, 2- Disable",
+            "type": "text"
+          },
+          {
+            "key": "lng_key",
+            "value": "en",
+            "disabled": true,
+            "description": "Langauage key",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/example/cron",
+          "host": [
+            "http://localhost:3000"
+          ],
+          "path": [
+            "example",
+            "cron"
+          ],
+          "query": [
+            {
+              "key": "data",
+              "value": "",
+              "disabled": true,
+              "description": "Encrypted data and url encode(URLSearchParams) the encrypted data to handle special characters",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "example/customResponseCode",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "enc_state",
+            "value": "1",
+            "disabled": true,
+            "description": "Encryption status: 1- Enable, 2- Disable",
+            "type": "text"
+          },
+          {
+            "key": "lng_key",
+            "value": "en",
+            "disabled": true,
+            "description": "Langauage key",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/example/customResponseCode",
+          "host": [
+            "http://localhost:3000"
+          ],
+          "path": [
+            "example",
+            "customResponseCode"
+          ],
+          "query": [
+            {
+              "key": "data",
+              "value": "",
+              "disabled": true,
+              "description": "Encrypted data and url encode(URLSearchParams) the encrypted data to handle special characters",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "example/customRoutes",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "enc_state",
+            "value": "1",
+            "disabled": true,
+            "description": "Encryption status: 1- Enable, 2- Disable",
+            "type": "text"
+          },
+          {
+            "key": "lng_key",
+            "value": "en",
+            "disabled": true,
+            "description": "Langauage key",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/example/customRoutes",
+          "host": [
+            "http://localhost:3000"
+          ],
+          "path": [
+            "example",
+            "customRoutes"
+          ],
+          "query": [
+            {
+              "key": "data",
+              "value": "",
+              "disabled": true,
+              "description": "Encrypted data and url encode(URLSearchParams) the encrypted data to handle special characters",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
       "name": "example/decryptData",
       "request": {
         "method": "GET",
@@ -239,8 +449,8 @@
           "query": [
             {
               "key": "data",
-              "value": "",
-              "disabled": true,
+              "value": "walCNiPvE5JAogazV25FgRTK5P%2FgCI%2BdNJKo2QxySrI%3D",
+              "disabled": false,
               "description": "data",
               "type": "text"
             },
@@ -288,8 +498,8 @@
           "query": [
             {
               "key": "data",
-              "value": "",
-              "disabled": true,
+              "value": "{\"name\":\"NJS2-user\"}",
+              "disabled": false,
               "description": "data should be in string format",
               "type": "text"
             },
@@ -404,6 +614,145 @@
       "response": []
     },
     {
+      "name": "example/fileHandling",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "enc_state",
+            "value": "1",
+            "disabled": true,
+            "description": "Encryption status: 1- Enable, 2- Disable",
+            "type": "text"
+          },
+          {
+            "key": "lng_key",
+            "value": "en",
+            "disabled": true,
+            "description": "Langauage key",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/example/fileHandling",
+          "host": [
+            "http://localhost:3000"
+          ],
+          "path": [
+            "example",
+            "fileHandling"
+          ]
+        },
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "document",
+              "value": "",
+              "disabled": false,
+              "description": "file uploaded to local",
+              "type": "file"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "example/fileHandlingS3",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "enc_state",
+            "value": "1",
+            "disabled": true,
+            "description": "Encryption status: 1- Enable, 2- Disable",
+            "type": "text"
+          },
+          {
+            "key": "lng_key",
+            "value": "en",
+            "disabled": true,
+            "description": "Langauage key",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/example/fileHandlingS3",
+          "host": [
+            "http://localhost:3000"
+          ],
+          "path": [
+            "example",
+            "fileHandlingS3"
+          ]
+        },
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "document",
+              "value": "",
+              "disabled": false,
+              "description": "file uploaded to s3 bucket",
+              "type": "file"
+            },
+            {
+              "key": "bucketName",
+              "value": "",
+              "disabled": false,
+              "description": "bucket name to upload file",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "example/global",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "enc_state",
+            "value": "1",
+            "disabled": true,
+            "description": "Encryption status: 1- Enable, 2- Disable",
+            "type": "text"
+          },
+          {
+            "key": "lng_key",
+            "value": "en",
+            "disabled": true,
+            "description": "Langauage key",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/example/global",
+          "host": [
+            "http://localhost:3000"
+          ],
+          "path": [
+            "example",
+            "global"
+          ],
+          "query": [
+            {
+              "key": "data",
+              "value": "",
+              "disabled": true,
+              "description": "Encrypted data and url encode(URLSearchParams) the encrypted data to handle special characters",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
       "name": "example/helloWorld",
       "request": {
         "method": "GET",
@@ -431,6 +780,48 @@
           "path": [
             "example",
             "helloWorld"
+          ],
+          "query": [
+            {
+              "key": "data",
+              "value": "",
+              "disabled": true,
+              "description": "Encrypted data and url encode(URLSearchParams) the encrypted data to handle special characters",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "example/localization",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "enc_state",
+            "value": "1",
+            "disabled": true,
+            "description": "Encryption status: 1- Enable, 2- Disable",
+            "type": "text"
+          },
+          {
+            "key": "lng_key",
+            "value": "en",
+            "disabled": true,
+            "description": "Langauage key",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/example/localization",
+          "host": [
+            "http://localhost:3000"
+          ],
+          "path": [
+            "example",
+            "localization"
           ],
           "query": [
             {
@@ -841,58 +1232,9 @@
           "query": [
             {
               "key": "user_id",
-              "value": "",
-              "disabled": true,
+              "value": "123",
+              "disabled": false,
               "description": "Example Id for user",
-              "type": "text"
-            },
-            {
-              "key": "data",
-              "value": "",
-              "disabled": true,
-              "description": "Encrypted data and url encode(URLSearchParams) the encrypted data to handle special characters",
-              "type": "text"
-            }
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "example/socketApiGateway",
-      "request": {
-        "method": "GET",
-        "header": [
-          {
-            "key": "enc_state",
-            "value": "1",
-            "disabled": true,
-            "description": "Encryption status: 1- Enable, 2- Disable",
-            "type": "text"
-          },
-          {
-            "key": "lng_key",
-            "value": "en",
-            "disabled": true,
-            "description": "Langauage key",
-            "type": "text"
-          }
-        ],
-        "url": {
-          "raw": "http://localhost:3000/example/socketApiGateway",
-          "host": [
-            "http://localhost:3000"
-          ],
-          "path": [
-            "example",
-            "socketApiGateway"
-          ],
-          "query": [
-            {
-              "key": "inp_vals",
-              "value": "",
-              "disabled": true,
-              "description": "inp_vals",
               "type": "text"
             },
             {
@@ -1006,7 +1348,7 @@
       "response": []
     },
     {
-      "name": "example/socketSocketIO",
+      "name": "example/socketIo",
       "request": {
         "method": "GET",
         "header": [
@@ -1026,13 +1368,13 @@
           }
         ],
         "url": {
-          "raw": "http://localhost:3000/example/socketSocketIO",
+          "raw": "http://localhost:3000/example/socketIo",
           "host": [
             "http://localhost:3000"
           ],
           "path": [
             "example",
-            "socketSocketIO"
+            "socketIo"
           ],
           "query": [
             {

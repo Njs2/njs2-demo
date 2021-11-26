@@ -2,33 +2,36 @@ const AWS = require("aws-sdk");
 const s3 = new AWS.S3();
 class ExampleFileHandlingS3Action extends baseAction {
   async executeMethod() {
-    let { fileObject } = this;
+    /*
+    FILE UPLOAD IN S3 EXAMPLE
 
-    let BucketName = "njs2-sample-4b418112-d015-4200-9f82-d6ed3ad9470b";
-    let content = fileObject.content;
+    Description:
+    -This example will create  a bucket in S3 and store the file in it.
+    -File location (URL) will be sent in the response.
 
-    //create s3 bucket
-    try {
-      await s3
-        .createBucket({
-          Bucket: BucketName,
-        })
-        .promise();
-    } catch (e) {}
+    Steps:
+    1. In init.js, define a parameter as type: 'file', please check the init.js file.
+    2. In postman under body tab, under form-data section you can upload file.
+    3. To run this locally, Make sure that you have aws credentials at ".aws/credentials",
+       (NOTE: Make sure have Read and Write permissions for the bucket)
+    4. To understand aws-sdk s3 servces, please check the following link: 
+          https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html
+    5. While deploying this project, make sure that you have the AWS configuration in config.json file.
+    */
+    let { fileObject, bucketName } = this;
 
     //To upload file to s3 bucket
     await s3
       .putObject({
-        Bucket: BucketName,
+        Bucket: bucketName,
         Key: fileObject.filename,
-        Body: content,
+        Body: fileObject.content,
       })
       .promise();
 
-    
     //To get url of uploaded file
     var s3url = s3.getSignedUrl("getObject", {
-      Bucket: BucketName,
+      Bucket: bucketName,
       Key: fileObject.filename,
     });
 

@@ -1,5 +1,5 @@
 
-class ExampleSocketSocketIOInitalize extends baseInitialize {
+class ExampleCustomRoutesInitalize extends baseInitialize {
 
   constructor() {
     super();
@@ -15,4 +15,4 @@ class ExampleSocketSocketIOInitalize extends baseInitialize {
   }
 }
 
-module.exports = ExampleSocketSocketIOInitalize;
+module.exports = ExampleCustomRoutesInitalize;

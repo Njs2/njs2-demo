@@ -3,16 +3,14 @@ class ExamplePostmanAction extends baseAction {
     /*
     POSTMAN USAGE EXAMPLE
 
-    Prerequisites:
-    1. Download Postman in your machine.
-
     Steps:
-    1. In Postman click on import -> select link tab -> paste http://localhost:3000/postman to import collection.
-    2. Select demo-project from collection and click on example/postman API.
-    3. Under the params section, add the following parameters:
+    1. Download Postman in your machine.
+    2. In Postman click on import -> select link tab -> paste "http://localhost:3000/postman" to import collection.
+    3. Select demo-project from collection and click on example/postman API.
+    4. Under the params section, add the following parameters:
       - x: 10
       - y: hello
-    4. Hit send button.
+    5. Hit send button.
     */
 
     let { x, y } = this;

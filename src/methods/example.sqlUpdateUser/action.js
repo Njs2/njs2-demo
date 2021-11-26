@@ -3,28 +3,15 @@ class ExampleSqlUpdateUserAction extends baseAction {
     /*
     SQL UPDATE USER EXAMPLE
 
-    Prerequisites:
-    1. Make sure that you have mysql installed on your machine. 
-    2. Install @njs2-sql package using npm (npm i @njs2/sql).
-    3. Configuration to sql connection can be found in config/config.json file.
-    4. Create a database named 'njs2-demo-database' in your mysql.
-    5. In njs2-demo-database database, create a table named 'user' with following columns
-        user_id (int)
-        user_name (varchar)
-        gender (varchar)
-    SQL QUERY:  CREATE TABLE `user` (
-                  `user_id` int(11) NOT NULL,
-                  `user_name` varchar(200) NOT NULL,
-                  `gender` varchar(200) NOT NULL,
-                  PRIMARY KEY (`user_id`)
+    Description:
+    - This example shows how to update a user in the sql database.
 
     Steps:
-    1. To understand userLib, read sqlLib/user.lib.js
-    2. Pass following arguments in params or request body:
+    1. Pass following arguments in params or request body:
       * user_id
       * user_name (for update)
       * gender (for update)
-    3. After getting response, check your database.
+    2. After getting response, check your database.
 
     */
 

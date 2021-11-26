@@ -3,29 +3,35 @@ class ExampleSqlCreateUserAction extends baseAction {
     /*
     SQL CREATE USER EXAMPLE
 
-    Prerequisites:
+    Description:
+    - This example shows how to create a user in the sql database.
+
+    Steps:
     1. Make sure that you have mysql installed on your machine. 
     2. Install @njs2-sql package using npm (npm i @njs2/sql).
-    3. Configuration to sql connection can be found in config/config.json file.
+    3. Update the below configuration in config/config.json as per your environment
+          "DATABASE_TYPE": "mysql",
+          "SQL_DB_HOST": "localhost",
+          "SQL_DB_NAME": "njs2-demo-database",
+          "SQL_DB_PORT": 3306,
+          "SQL_DB_USER": "root",
+          "SQL_DB_PASSWORD": "password"
     4. Create a database named 'njs2-demo-database' in your mysql.
-    5. In njs2-demo-database database, create a table named 'user' with following columns
-        user_id (int)
-        user_name (varchar)
-        gender (varchar)
-    SQL QUERY:  CREATE TABLE `user` (
+    5. In above database, create a table named 'user' with following query,
+              CREATE TABLE `user` (
                   `user_id` int(11) NOT NULL,
                   `user_name` varchar(200) NOT NULL,
                   `gender` varchar(200) NOT NULL,
                   PRIMARY KEY (`user_id`)
+              )
 
-
-    Steps:
-    1. To understand userLib, read sqlLib/user.lib.js
-    2. Pass following arguments from Postman under body section:
+    6. To understand userLib, read sqlLib/user.lib.js
+        (NOTE: you can use "njs2 library sqlLib user sql" to create "user.lib.js" file under "library/sqlLib" with 'sql' templates)
+    7. Pass following arguments from Postman under body section:
       * user_id
       * user_name
       * gender
-    3. After getting response, check your database.
+    8. After getting response, check your database for created user.
 
     */
 

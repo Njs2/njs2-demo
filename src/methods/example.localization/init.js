@@ -1,5 +1,5 @@
 
-class ExampleSocketApiGatewayInitalize extends baseInitialize {
+class ExampleLocalizationInitalize extends baseInitialize {
 
   constructor() {
     super();
@@ -15,4 +15,4 @@ class ExampleSocketApiGatewayInitalize extends baseInitialize {
   }
 }
 
-module.exports = ExampleSocketApiGatewayInitalize;
+module.exports = ExampleLocalizationInitalize;

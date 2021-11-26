@@ -1,17 +1,12 @@
 class ExampleGlobalAction extends baseAction {
   async executeMethod() {
     /*
-    GLOBAL EXAMPLE
-
-    Prerequisites:
-    1. For create new global variable use global/constants.js file.
-    2. For this example, create variable as follows:
-        constant.FRAMEWORK_NAME = "NJS2";
-
+    GLOBAL CONSTANTS EXAMPLE
+    
     Steps:
-    1. GLB holds the global variables which is defined in global/constants.js file.
-    2. GLB.FRAMEWORK_NAME holds the value of FRAMEWORK_NAME which is defined in prerequisites.
-    3. So this example will send "NJS2" in the response.
+    1. Add "constant.FRAMEWORK_NAME = "NJS2" statement to global/constants.js file.
+    2. By adding this, It's scope is global, i.e it will available throughout the project without importing or exporting it.
+    3. To access it anywhere, you can use GLB.FRAMEWORK_NAME.
     */
 
     const framework_name = GLB.FRAMEWORK_NAME;

@@ -1,7 +1,6 @@
 class testLib {
   testFunction() {
-    return 'testFunction in helper';
+    return "testFunction in helper";
   }
 }
-
 module.exports = testLib;

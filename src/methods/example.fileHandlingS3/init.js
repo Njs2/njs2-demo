@@ -5,7 +5,7 @@ class ExampleFileHandlingS3Initalize extends baseInitialize {
     super();
     this.pkgInitializer =  {};
     this.pkgInitializer.isSecured = false; // values: true/false
-    this.pkgInitializer.requestMethod = ['GET']; // requestMethod: ['GET', 'POST', 'PUT', 'DELETE']
+    this.pkgInitializer.requestMethod = ['POST']; // requestMethod: ['GET', 'POST', 'PUT', 'DELETE']
   }
 
   getParameter() {
@@ -14,6 +14,13 @@ class ExampleFileHandlingS3Initalize extends baseInitialize {
         "name": "document",
         "type": "file",
         "description": "file uploaded to s3 bucket",
+        "required": true,
+        "default": ""
+      },
+      "bucketName": {
+        "name": "bucketName",
+        "type": "string",
+        "description": "bucket name to upload file",
         "required": true,
         "default": ""
       },

@@ -21,7 +21,7 @@ const initUserModel = async () => {
     return userModel;
     
   } catch (err) {
-    logger.error(err);
+    console.log(err);
     return null;
   }
 };

@@ -3,47 +3,30 @@ const fs = require("fs");
 class ExampleFileHandlingAction extends baseAction {
   async executeMethod() {
     /*
-    FILE HANDLING EXAMPLE
+    FILE UPLOAD IN LOCAL EXAMPLE
 
-    Prerequisites:
-    1. Make sure you have a file to upload.
-    2. In init.js file type of argument should be 'file', please read the init.js file.
+    Description:
+    -This example will store the file in Assets/Uploads folder.
+    -File location will be sent in the response.
 
     Steps:
-    1. In postman under body tab, under form-data section you can upload file.
-    2. This example will create folder with name uploadedFiles at root folder.
-    3. Then upload the file to that folder and send the file location as a response.
+    1. In init.js, define a parameter as type: 'file', please check the init.js file.
+    2. Import 'fs' module for file manipulation.
+    3. In postman under body tab, under form-data section you can upload file.
     */
 
     let { fileObject } = this;
 
-    const createDir = async (dirPath) => {
-      await fs.mkdir(dirPath, (error) => {
-        if (error) console.log("error occured while creating directory");
-        else console.log("directory created..");
-      });
-    };
-
-    const createFile = async (path, content) => {
-      await fs.writeFile(path, content, (error) => {
-        if (error) console.log("error ", error);
-        else {
-          console.log("file created");
-        }
-      });
-    };
-
-    const path = process.cwd() + "/uploadedFiles/";
+    const path = process.cwd() + "/Assets/Uploads/" + fileObject.filename;
     const content = fileObject.content;
 
-    await createDir(path);
-    await createFile(path + fileObject.filename, content);
-
-  
+    fs.writeFileSync(path, content, (error) => {
+      if (error) console.log("error in createion of file ", error.message);
+    });
 
     this.setResponse("SUCCESS");
     return {
-      file_uploaded_url: path + fileObject.filename,
+      file_uploaded_url: path,
     };
   }
 }

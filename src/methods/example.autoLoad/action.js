@@ -3,21 +3,26 @@ class ExampleAutoLoadAction extends baseAction {
     /*
     AUTOLOAD EXAMPLE
 
-    Prerequisites:
-    1. In src/library/helper folder test.lib.js file created.
-    2. Follow the same naming conventions as <FILE_NAME>.lib.js
-    3. In the test file, testFunction is created which returns string "testFunction in helper".
-    4. Please read the src/library/helper/test.lib.js file for more details.
-
     Steps:
-    1. This example shows how to load the helper file test.lib.js in this file in the name of testLib.
-    2. testLib.testFunction() is syntax used for calling testFunction.
-    3. Run this API and see the result.
+    1. Create a test file in the src/library/helperLib folder using the below command:
+          njs2 library test
+    2. Above command will create a test.lib.js file in the src/library/helperLib folder.
+    3. Add the following content to the file:
+          class testLib {
+            testFunction() {
+              return 'testFunction in helper';
+            }
+          }
+          module.exports = testLib;
+    4. To load this perticular helper method, use 'AutoLoad' as given below,
+          const [testLib] = AutoLoad('helperLib',['test']);
+    5. More AutoLoad examples are given below.
+          To load Sql Library - AutoLoad.loadLibray("sqlLib",["<FILE_NAME>"]) 
+          To load Mongo Library - AutoLoad.loadLibray("mongoLib",["<FILE_NAME>"]) 
+        (NOTE: <FILE_NAME> is the name of the file without .lib.js)
     */
 
-    //To load Sql Library - AutoLoad.loadLibray("sqlLib",["<FILE_NAME>"]) (NOTE: <FILE_NAME> is the name of the file without .lib.js)
-    //To load Mongo Library - AutoLoad.loadLibray("mongoLib",["<FILE_NAME>"]) (NOTE: <FILE_NAME> is the name of the file without .lib.js)
-    //To load Redis Library - AutoLoad.loadLibray("redisLib",["<FILE_NAME>"]) (NOTE: <FILE_NAME> is the name of the file without .lib.js)
+
 
     const [testLib] = AutoLoad.loadLibray("helperLib", ["test"]);
 

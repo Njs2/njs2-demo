@@ -5,7 +5,11 @@ class ExampleRestApiAction extends baseAction {
     /*
     REST API EXAMPLE
 
-    Prerequisites:
+    Description:
+    - This example shows how to define a rest api.
+    - By default in init.js, Method is set to GET method. So it works with GET method.
+
+    Steps:
     In init.js set the following:
     1. To create GET request, set this.pkgInitializer.requestMethod = ["GET"]
     2. To create POST request, set this.pkgInitializer.requestMethod = ["POST"]
