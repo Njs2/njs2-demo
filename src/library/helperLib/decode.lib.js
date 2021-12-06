@@ -1,10 +1,10 @@
 const crypto = require("crypto");
 const { Buffer } = require("buffer");
-const { ENCRYPTION } = require("../../config/config.json");
+const { ENCRYPTION_KEY,ENCRYPTION_IV } = JSON.parse(process.env.ENCRYPTION) //getting ENCRYPTION_KEY and ENCRYPTION_IV which is configured in config/config.json.
 
 const algorithm = "aes-256-cbc";
-const key = ENCRYPTION.ENCRYPTION_KEY; //KEY used for decryption and encryption
-const secretiv = ENCRYPTION.ENCRYPTION_IV; //IV used for decryption and encryption
+const key = ENCRYPTION_KEY; //KEY used for decryption and encryption
+const secretiv = ENCRYPTION_IV; //IV used for decryption and encryption
 
 class decryptLib {
   decryptText(encrypted) {
