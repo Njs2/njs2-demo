@@ -3,6 +3,7 @@ const init = require('./src/library/roomHandler/init');
 const websockets = require('./websockets');
 
 module.exports.handler = async (event) => {
+  console.log("event ",event);
   try {
     const requestType = event.stageVariables.requestType;
     if (requestType === 'API') {

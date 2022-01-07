@@ -18,7 +18,6 @@ const initExampleModel = async () => {
 
     return exampleModel;
   } catch (err) {
-    logger.error(err);
     return null;
   }
 };

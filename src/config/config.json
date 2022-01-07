@@ -13,24 +13,45 @@
   "LAMBDA_FUNCTION_NAME": "",
   "AUTH": {
     "AUTH_MODE": "JWT",
-    "JWT_SECRET": "123",
+    "JWT_SECRET": "my_secret_key",
     "JWT_ID_KEY": "user_id",
-    "DB_TABLE_NAME": "",
+    "DB_TABLE_NAME": "jwt_users",
     "DB_ID_KEY": "user_id",
     "DB_ACCESS_KEY": "access_token",
     "DB_REFRESH_KEY": ""
   },
   "ENCRYPTION": {
     "ENCRYPTION_MODE": "optional",
-    "ENCRYPTION_KEY": "",
-    "ENCRYPTION_IV": ""
+    "ENCRYPTION_KEY": "secret-key",
+    "ENCRYPTION_IV": "secret-iv"
   },
   "SALT_ROUNDS": 8,
   "BASE": {
     "USE_LAMBDA_ROLE": "NO",
     "AWS_REGION": "",
-    "AWS_ACCESS_KEY_ID": "",
-    "AWS_SECRET_ACCESS_KEY_ID": "",
+    "AWS_ACCESS_KEY_ID": "any_id",
+    "AWS_SECRET_ACCESS_KEY_ID": "any_access_key",
     "AWS_ROLE_ARN": ""
+  },
+  "MONGO": {
+    "MONGO_DB_HOST": "localhost",
+    "MONGO_DB_NAME": "test",
+    "MONGO_DB_PORT": 27017,
+    "MONGO_DB_USER": "",
+    "MONGO_DB_PASSWORD": ""
+  },
+  "REDIS": {
+    "REDIS_HOST_URL": "localhost",
+    "REDIS_HOST_PORT": 6379,
+    "REDIS_HOST_PASSWORD": "",
+    "REDIS_PREFIX_KEY": "USER_"
+  },
+  "SQL": {
+    "DATABASE_TYPE": "mysql",
+    "SQL_DB_HOST": "localhost",
+    "SQL_DB_NAME": "njs2-demo-database",
+    "SQL_DB_PORT": 3306,
+    "SQL_DB_USER": "root",
+    "SQL_DB_PASSWORD": "password"
   }
 }
