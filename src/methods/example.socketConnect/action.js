@@ -8,7 +8,7 @@ class ExampleSocketConnectAction extends baseAction {
     2. In this example, we expects the socket_id of socket connection (Read init.js for setup).
     3. While socket connection establishing, socket id will automatically passed to this action as 'socket_id'.es
     4. If you want access_token for connection, make sure you have following setup in init.js,
-          this.pkgInitializer.isSecured = true;
+          this.initializer.isSecured = true;
     5. You can't pass access_token or any data in header while connection establishing, you have to pass it in connection URL as shown below,
           For SocketIO: http://localhost:3001?name=user123&access_token=<ACCESS_TOKEN>
           For ApiGateway: ws://localhost:3001?name=user123&access_token=<ACCESS_TOKEN>

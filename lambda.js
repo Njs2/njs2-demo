@@ -27,7 +27,12 @@ module.exports.handler = async (event) => {
     } else if (requestType === 'processRoom') {
       return await init(event.content);
     } else if (requestType === 'scheduler') {
-
+      // const {SCEDULER} = require("./src/config/config.json");
+      // const packageName = event.stageVariables.packageName;
+      // const taskName = event.stageVariables.taskName;
+      // const cronDetails = SCEDULER[packageName];
+      // require the file by taskName
+      await require(`./src/tasks/${taskName}.task.js`).handler();
     }
   } catch (error) {
     console.error(error);

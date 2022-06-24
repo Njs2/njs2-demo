@@ -3,9 +3,9 @@ class ExampleRedisDeleteInitalize extends baseInitialize {
 
   constructor() {
     super();
-    this.pkgInitializer =  {};
-    this.pkgInitializer.isSecured = false; // values: true/false
-    this.pkgInitializer.requestMethod = ['DELETE']; // requestMethod: ['GET', 'POST', 'PUT', 'DELETE']
+    this.initializer =  {};
+    this.initializer.isSecured = false; // values: true/false
+    this.initializer.requestMethod = ['DELETE']; // requestMethod: ['GET', 'POST', 'PUT', 'DELETE']
   }
 
   getParameter() {

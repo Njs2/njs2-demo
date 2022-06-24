@@ -3,9 +3,9 @@ class ExampleFileHandlingInitalize extends baseInitialize {
 
   constructor() {
     super();
-    this.pkgInitializer =  {};
-    this.pkgInitializer.isSecured = false; // values: true/false
-    this.pkgInitializer.requestMethod = ['POST']; // requestMethod: ['GET', 'POST', 'PUT', 'DELETE']
+    this.initializer =  {};
+    this.initializer.isSecured = false; // values: true/false
+    this.initializer.requestMethod = ['POST']; // requestMethod: ['GET', 'POST', 'PUT', 'DELETE']
   }
 
   getParameter() {

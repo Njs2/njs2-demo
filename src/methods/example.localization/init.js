@@ -3,9 +3,9 @@ class ExampleLocalizationInitalize extends baseInitialize {
 
   constructor() {
     super();
-    this.pkgInitializer =  {};
-    this.pkgInitializer.isSecured = false; // values: true/false
-    this.pkgInitializer.requestMethod = ['GET']; // requestMethod: ['GET', 'POST', 'PUT', 'DELETE']
+    this.initializer =  {};
+    this.initializer.isSecured = false; // values: true/false
+    this.initializer.requestMethod = ['GET']; // requestMethod: ['GET', 'POST', 'PUT', 'DELETE']
   }
 
   getParameter() {

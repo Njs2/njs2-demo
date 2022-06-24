@@ -1,5 +1,5 @@
 
-class ExampleDecryptDataInitalize extends baseInitialize {
+class ExampleMCronInitalize extends baseInitialize {
 
   constructor() {
     super();
@@ -10,12 +10,12 @@ class ExampleDecryptDataInitalize extends baseInitialize {
 
   getParameter() {
     const param = {
-      "data": {
-        "name": "data",
+      "inpVals": {
+        "name": "inp_vals",
         "type": "string",
-        "description": "data",
-        "required": true,
-        "default": "walCNiPvE5JAogazV25FgRTK5P%2FgCI%2BdNJKo2QxySrI%3D"
+        "description": "inp_vals",
+        "required": false,
+        "default": ""
       },
     };
 
@@ -23,4 +23,4 @@ class ExampleDecryptDataInitalize extends baseInitialize {
   }
 }
 
-module.exports = ExampleDecryptDataInitalize;
+module.exports = ExampleMCronInitalize;

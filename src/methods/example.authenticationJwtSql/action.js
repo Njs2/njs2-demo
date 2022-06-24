@@ -32,7 +32,7 @@ class ExampleAuthenticationJwtSqlAction extends baseAction {
         "DB_TABLE_NAME": "jwt_users"         (NOTE: Name of table which contains JWT_ID_KEY and DB_ACCESS_KEY)
         "DB_ID_KEY": "user_id",              (NOTE: Name of argument which return from JWT Token)   
         "DB_ACCESS_KEY": "access_token"      (NOTE: Name of argument which searches in DB_TABLE_NAME for access_token passed in request header)
-    5. In init.js, set this.pkgInitializer.isSecured: true.
+    5. In init.js, set this.initializer.isSecured: true.
     6. Pass the access_token in request header which is given in step 3.
     
     */

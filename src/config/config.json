@@ -53,5 +53,23 @@
     "SQL_DB_PORT": 3306,
     "SQL_DB_USER": "root",
     "SQL_DB_PASSWORD": "password"
+  },
+  "SCHEDULER": {
+    "local": {
+      "mCron": [
+        {
+          "name": "roomInit",
+          "time": 1,
+          "active": true
+        }
+      ],
+      "cron": [
+        {
+          "name": "dailyReward",
+          "time": 1,
+          "active": true
+        }
+      ]
+    }
   }
 }
