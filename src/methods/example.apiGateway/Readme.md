@@ -5,6 +5,7 @@
 1. In config.json, set the following:
 ```json
 { 
+  // other pre-existing constants
   "SOCKET_SYSTEM_TYPE": "API_GATEWAY"
   "USE_LAMBDA_ROLE": "NO",
   "AWS_ACCESS_KEY_ID": "any_id",
