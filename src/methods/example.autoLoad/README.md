@@ -22,5 +22,5 @@
 
      - To load Sql Library - ```javascript AutoLoad.loadLibray("sqlLib",["<FILE_NAME>"]) ```
      - To load Mongo Library - ```javascript AutoLoad.loadLibray("mongoLib",["<FILE_NAME>"]) ```
-     
-*NOTE: <FILE_NAME> is the name of the file without ```.lib.js``` *
+     - 
+* NOTE: <FILE_NAME> is the name of the file without ```.lib.js``` *
