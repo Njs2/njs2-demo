@@ -17,18 +17,18 @@ This module is used to execute business logic which requires to be executed at t
    module.exports = mCronFunction
    ```
 
-2) To Schedule mCron in `config.json` inside SCHEDULER.local add mCron following details -
+2) To Schedule mCron in `config.json` inside ```SCHEDULER``` key ```local``` add the desired mCron details as follows -
 
 - Inside mCron array add Object with :
-- name: string,
-  - `name` is the file name which is to be executed.
-  - If file name is `roomInit.task.js` then name would be `roomInit`
-- time: number (seconds),
-  - `time` it is in which interval of seconds the code needs to be executed.
-  - If `time : 1` is mention then roomInit will execute in every one seconds.
-- active: boolean
-  - `active` to Enable or Disable the mCron can be controlled.
-  - if `active: true` then roomInit will be executing at specified interval
+   - name: string,
+     - `name` is the file name which is to be executed.
+     - If file name is `roomInit.task.js` then name would be `roomInit`
+   - time: number (seconds),
+     - `time` it is in which interval of seconds the code needs to be executed.
+     - If `time : 1` is mention then roomInit will execute in every one seconds.
+   - active: boolean
+     - `active` to Enable or Disable the mCron can be controlled.
+     - if `active: true` then roomInit will be executing at specified interval
 
 Eg:
 
