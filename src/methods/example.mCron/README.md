@@ -2,33 +2,21 @@
 
 ## Description
 
-This module is used to execute business logic which requires to be executed at time interval less than a minute
+This feature is used to execute any script which requires to be called at a time-interval which is less than 1 Minute
 
-1. Business logic should be written inside the `src/tasks` folder with naming conventions as per the default example file`(mCron.tasks.js)`.
+1. Script should be saved inside the `src/tasks` folder with naming conventions as per the default example file`(example.tasks.js)`.
    Eg:
 
    ```javascript
-   async function mCronFunction() {
-     // Fetch all Active rooms
-     // Check of satisfactory match making condition to fulfilled
-     // Process room start logic
-     console.log('Room Initialization - Logic')
+   async function exampleFunction() {
+     // HERE YOU CAN WRITE YOUR CODE
    }
-   module.exports = mCronFunction
+   module.exports = exampleFunction
    ```
 
-2) To Schedule mCron in `config.json` inside ```SCHEDULER``` key ```local``` add the desired mCron details as follows -
+2) Enable mCron(s)
+To enable mCron you should update below configuration in ```src/config/config.json```
 
-- Inside mCron array add Object with :
-   - name: string,
-     - `name` is the file name which is to be executed.
-     - If file name is `roomInit.task.js` then name would be `roomInit`
-   - time: number (seconds),
-     - `time` it is in which interval of seconds the code needs to be executed.
-     - If `time : 1` is mention then roomInit will execute in every one seconds.
-   - active: boolean
-     - `active` to Enable or Disable the mCron can be controlled.
-     - if `active: true` then roomInit will be executing at specified interval
 
 Eg:
 
@@ -38,8 +26,8 @@ Eg:
     "local": {
       "mCron": [
         {
-          "name": "roomInit",
-          "time": 1,
+          "name": "example",
+          "time": 10,
           "active": true
         }
       ]
@@ -47,7 +35,17 @@ Eg:
   }
 }
 ```
+Configuration options:
 
-3. To execute the mCrons from the terminal execute the mCron.js file in the root of the project.
+   - name: string,
+     - `name` is the file name which is to be executed.
+     - for e.g.: If file name is `example.task.js` then name would be `example`
+   - time: number (in seconds),
+     - `time` - time interval in seconds
+     - for e.g.: If `time : 10` is mentioned, then 'example' script will executed for every '10 seconds'
+   - active: boolean
+     - `active` to Enable or Disable the mCron script
+     - for e.g.: if `active: true` then the script will be executed at the specified interval. if `active: false`, the script will not be executed.
 
-- For example - `node mCron.js`
+3. To Activate the mCron feature make sure the below script is running in the node process or PM2 or equivalent node script executors.
+`node mCron.js`
