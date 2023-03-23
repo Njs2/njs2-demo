@@ -1,7 +1,56 @@
-## CRON EXAMPLE
+## Configure cron(s) in your project
 
-### Description : 
+Add cron details to the `config.json` file in the `SCHEDULER` section:
+```
+  "SCHEDULER": {
+    "local": {
+      ...
+      "cron": [
+        {
+          "name": "lifeRefill",
+          "time": "*/10 * * * *",
+          "active": true,
+          "lambda": false
+        },
+        {
+          "name": "weeklyReward",
+          "time": "0 0 * * 1",
+          "active": true,
+          "lambda": false
+        }
+      ]
+    },
+    ...
+  }
+```
 
-This module is used to execute business logic which requires to be executed at time interval more than a minute.
-1. Business logic should be written inside the tasks folder with naming convetions as per the defualt example file ```cron.tasks.js```
-2. Enabling/Disabling the Cron job can be done in the config.json file inside SCHEDULER key.    
+## Setting up cron(s) on Linux machine (for e.g: EC2)
+
+Connect to the Linux Machine, Open terminal and run following command to edit crontab file:
+   
+```shell
+crontab -e
+```
+
+ In the crontab configuration file add the following command:
+
+```shell
+* * * * * cd <project-path> && node cron.js >> <log-file-name>.log 2>&1
+```
+
+> **_NOTE:_** For easy access to crontab logs `>> <log-file-name>.log 2>&1` is used. This will create a log file to store crontab logs.
+
+This will create a file with name `<log-file-name>.log` in your project.
+
+ Crontab setup is successful. Please check the logs if eveything is working fine.
+
+
+## Trigger cron from EventBridge
+
+Add an AWS EventBridge Rule to trigger the Concerned Lambda "Every Minute".
+
+Send the below parameter to the Trigger.
+
+```
+requestType = "cron"
+```
