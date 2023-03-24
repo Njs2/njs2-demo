@@ -1,7 +1,7 @@
 ## Configure cron(s) in your project
 
 Add cron details to the `config.json` file in the `SCHEDULER` section:
-```
+```json
   "SCHEDULER": {
     "local": {
       ...
@@ -51,6 +51,6 @@ Add an AWS EventBridge Rule to trigger the Concerned Lambda "Every Minute".
 
 Send the below parameter to the Trigger.
 
-```
+```json
 requestType = "cron"
 ```
