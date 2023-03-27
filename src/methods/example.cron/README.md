@@ -4,6 +4,7 @@ Add cron details to the `config.json` file in the `SCHEDULER` section:
 
 ```json
 {
+  ...
   "SCHEDULER": {
     "local": {
       ...
