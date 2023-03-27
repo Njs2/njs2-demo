@@ -1,7 +1,9 @@
 ## Configure cron(s) in your project
 
 Add cron details to the `config.json` file in the `SCHEDULER` section:
+
 ```json
+{
   "SCHEDULER": {
     "local": {
       ...
@@ -22,13 +24,14 @@ Add cron details to the `config.json` file in the `SCHEDULER` section:
     },
     ...
   }
+}
 ```
 
 ## Setting up cron(s) on Linux machine (for e.g: EC2)
 
 Connect to the Linux Machine, Open terminal and run following command to edit crontab file:
    
-```shell
+```
 crontab -e
 ```
 
