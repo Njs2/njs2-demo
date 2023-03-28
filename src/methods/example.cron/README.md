@@ -12,14 +12,12 @@ Add cron details to the `config.json` file in the `SCHEDULER` section:
         {
           "name": "lifeRefill",
           "time": "*/10 * * * *",
-          "active": true,
-          "lambda": false
+          "active": true
         },
         {
           "name": "weeklyReward",
           "time": "0 0 * * 1",
-          "active": true,
-          "lambda": false
+          "active": true
         }
       ]
     },
@@ -39,7 +37,7 @@ crontab -e
 
  In the crontab configuration file add the following command:
 
-```shell
+```
 * * * * * cd <project-path> && node cron.js >> <log-file-name>.log 2>&1
 ```
 
