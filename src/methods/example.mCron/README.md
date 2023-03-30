@@ -24,12 +24,14 @@ To enable mCron you should update below configuration in `src/config/config.json
         {
           "name": "roomHandler",
           "time": 1, // every second this mCron should be called
-          "active": true // this mCron is ACTIVE
+          "active": true, // this mCron is ACTIVE
+          "runInLambda": false
         },
         {
           "name": "lifeRefill",
           "time": 30, // every 30 seconds this mCron should be called
-          "active": false // this mCron will be SKIPPED
+          "active": false, // this mCron will be SKIPPED
+          "runInLambda": false
         }
       ]
     }
